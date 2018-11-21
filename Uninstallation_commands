@@ -1,0 +1,10 @@
+>> Uninstall the openshift cluster
+    ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/adhoc/uninstall.yml
+    
+>> delete all left over content (certificates etc.) in the /etc/origin directories on all masters and nodes.
+    ansible nodes -a "rm -rf /etc/origin"
+    
+>> It is also necessary to delete all data from the NFS Server.
+    ansible nfs -a "rm -rf /srv/nfs/*"
+    
+>> Now install it again using the installation command    
