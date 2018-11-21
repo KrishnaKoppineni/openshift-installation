@@ -1,0 +1,3 @@
+To install the openshift using Inventory and playbook files run the following command
+
+ansible-playbook -f 20 -i /root/my_ocp_inventory /usr/share/ansible/openshift-ansible/playbooks/byo/config.yml
